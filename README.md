@@ -1,27 +1,34 @@
 # Defining Styles
 
 ## Objectives
-* create an embedded style
-* create class or html tag selectors that can be used to apply a style across a document
-* use the position, top, left, width, and height styles to create an html block and place it on the html document
+* identifying when to use a class vs id
+* create styles for id to help position elements using position, left, right, top, bottom, width and height
+* to use z-index to specify layer
 
-We have looked at Inline Styles, where the style is defined inside an HTML Tag.  A better approach to use an *embedded* style, where the style is included in a style tag.
+We have looked at style classes to help create reusable styles that can be placed anywhere in the document:
+```
+<style>
+  .eg { color: red;}
+</style>
 
-Open the page1.html document and see how this can be used.
+<span class="eg">This text is red</span>
+```
 
-* A tag can include multiple styles. They are separated by a space
-* Multiple styles can be defined in the style tag, they are separated by a comma
-* A class is defined with a dot (.) followed by the name of the class
-* A class definition can be assigned to a specific tag, but can be a global class
+There is another selector, the **id**.  selector ID's differ from classes in that the class is intended to be used many times, but an ID is to specify a unique element.  
+
+Consider this example.  A book may have many chapter titles, so we might specify those as classes.  However, there is only one book title, and that might be specified as an ID.
+
+
+### Style Selector ID
 * An ID is defined with a hashtag (#) followed by the name of the id
 * An ID can be assigned to a specific element, but ID's should be unique
 
-# What is the difference between an ID and a Class?
+### What is the difference between an ID and a Class?
 
 An ID is intended for unique elements on the page. Think about a button that does a task, like a Save Button.  You only have 1 Save button on a page.
 A Class is a reusable style.  Maybe you have a roster for a team, and all of the Tanks need to have one style, and all the Smashers need to have another style.
 
-# Positioning
+### Positioning
 
 You can put multiple sections on a page, kind of like using text boxes in Microsoft Word.  We use the position style.  Today we will look at the most basic position: absolute
 
@@ -32,7 +39,11 @@ A page can be imagined as being a coordinate plane, except the (0,0) coordinate 
 
 How do you put one element/block in front of another if they overlap? Z-index is the style that determines order on a page.  Higher numbers are placed on top of lower numbers!
 
+### Floating elements
+There is a style called ***float*** that works to take block elements and wrap inline elements around them.  Take a look at float.html for some examples.
+
 
 ## Assignment
 
-Style the document called document1.html using embedded Styles.  Use layouts to make the page look better. Work in full screen mode so we don't have to worry about cropping the page. You will need to add all the proper elements to make this a proper html document.
+Open up the document called assignment.html.
+There are several short stories in here.  Move each one into its own block, and display them on your page in an attractive format.  You should find a picture that you can include with each one.  You may want to consider the use of the float style for images.  See the example file, float.html
